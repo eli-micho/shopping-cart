@@ -1,3 +1,18 @@
+# Introduction
+
+This project is a simple sample eCommerce website that has the ability to shop items, add them to cart and checkout. This project idea was inspired
+by the Odin Project Javascript Curriculum ([Link](https://www.theodinproject.com/courses/javascript/lessons/shopping-cart)).
+
+# Built With
+
+- HTML
+- CSS
+- ReactJs
+- React-redux
+
+# Preview
+ - Coming Soon
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
