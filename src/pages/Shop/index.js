@@ -1,29 +1,23 @@
 import React from 'react';
 import { connect, useDispatch } from 'react-redux';
-import { addToCart } from './../../redux/actions/cartActions';
+import { addProduct } from './../../redux/Cart/cart.actions';
 import ItemCard from './../../components/ItemCard';
 import plantsObj from './../../plantsObj';
 import './styles.scss';
 
-const mapStateToProps = (state) => {
-    return { items: state.items }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return { addToCart: (id) => {dispatch(addToCart)}}
-}
-
 const Shop = (props) => {
-    
-
-    const handleClick = (id) => {
-        props.addToCart(id);
+    const dispatch = useDispatch();
+    const handleAddToCart = (product) => {
+        if(!product) return;
+        dispatch(
+            addProduct(product)
+        )
     }
 
     return (
         <div className="shop">
             {plantsObj.map(x => {
-                return <ItemCard plants={x} onClick={() => {handleClick(x.id)}} />
+                return <ItemCard plants={x} onClick={() => {handleAddToCart(x)}} />
             })}
         </div>
     );
@@ -31,4 +25,4 @@ const Shop = (props) => {
 
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shop);
+export default Shop;

@@ -12,7 +12,8 @@ const plantsObj = [
         id: 1,
         name: 'Air Plant',
         imgpath: airplant,
-        price: 15.99
+        price: 15.99,
+        quantity: 0
     },
     {
         id: 2,

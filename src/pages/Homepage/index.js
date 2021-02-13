@@ -20,4 +20,4 @@ const Homepage = (props) => {
     );
 };
 
-export default connect(mapStateToProps)(Homepage);
+export default Homepage;

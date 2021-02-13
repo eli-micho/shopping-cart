@@ -3,12 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
-const mapStateToProps = (state) => {
-    return { 
-        items: state.addedItems
-    }
-}
-
 class Checkout extends Component {
     render() {
         const addedItems = this.props.items.length ?
@@ -35,4 +29,4 @@ class Checkout extends Component {
     }
 };
 
-export default connect(mapStateToProps)(Checkout);
+export default Checkout;
