@@ -9,44 +9,52 @@ import yucca from './assets/imgs/yucca.jpg';
 
 const plantsObj = [
     {
+        id: 1,
         name: 'Air Plant',
         imgpath: airplant,
-        price: '$15.99'
+        price: 15.99
     },
     {
+        id: 2,
         name: 'Aloe',
         imgpath: aloe,
-        price: '$20.99'
+        price: 20.99
     },
     {
+        id: 3,
         name: 'Algaonema',
         imgpath: algaonema,
-        price: '$11.99'
+        price: 11.99
     },
     {
+        id: 4,
         name: 'Asparagus-fern',
         imgpath: asparagusfern,
-        price: '$45.99'
+        price: 45.99
     },
     {
+        id: 5,
         name: 'Dragon-Tree',
         imgpath: dragontree,
-        price: '$33.99'
+        price: 33.99
     },
     {
+        id: 6,
         name: 'Jade',
         imgpath: jade,
-        price: '$50.99'
+        price: 50.99
     },
     {
+        id: 7,
         name: 'Peace-Lily',
         imgpath: peacelily,
-        price: '$24.99'
+        price: 24.99
     },
     {
+        id: 8,
         name: 'Yucca',
         imgpath: yucca,
-        price: '$9.99'
+        price: 9.99
     },
 ];
 

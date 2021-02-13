@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 //Layouts
@@ -14,6 +14,11 @@ import Checkout from './pages/Checkout';
 import './default.css';
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
+  const addToCart = (item) => {
+    setCartItems([...cartItems, item])
+  };
+
   return (
     <div>
       <Switch>
@@ -25,7 +30,7 @@ function App() {
 
         <Route exact path="/shop" render={() => (
           <MainLayout>
-            <Shop />
+            <Shop addToCart={addToCart}/>
           </MainLayout>
         )} />
 

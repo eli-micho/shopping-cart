@@ -1,6 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Sidebar from '../../components/Sidebar';
 import './styles.scss';
+
+const mapStateToProps = (state) => {
+    return { items: state.items }
+}
 
 const Homepage = (props) => {
     return (
@@ -15,4 +20,4 @@ const Homepage = (props) => {
     );
 };
 
-export default Homepage;
+export default connect(mapStateToProps)(Homepage);
