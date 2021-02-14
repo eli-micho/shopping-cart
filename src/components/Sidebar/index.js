@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { selectCartItemsCount } from './../../redux/Cart/cart.selectors';
 import './styles.scss';
 
-const Sidebar = () => {
+const mapState = (state) => ({
+    totalCartItems: selectCartItemsCount(state)
+})
+
+const Sidebar = (props) => {
+    const dispatch = useDispatch();
+    const { totalCartItems } = useSelector(mapState)
+
     return (
         <div className="sidebar">
             <div className="title-container">
@@ -21,8 +30,9 @@ const Sidebar = () => {
             </div>
 
             <div className="cart-container">
+
                 <Link to="/checkout">
-                    <span>Cart (0)</span>
+                    <span>Cart ({totalCartItems})</span>
                 </Link>
             </div>
         </div>
